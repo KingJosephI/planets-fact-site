@@ -1,10 +1,14 @@
+import { Routes, Route } from 'react-router-dom';
+import PlanetPage from './pages/PlanetPage/PlanetPage';
 import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Joseph Madras de Luluabourg</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<PlanetPage />} />
+      {/* <Route path='/:planet' element={ } /> */}
+      <Route />
+    </Routes>
   );
 }
 

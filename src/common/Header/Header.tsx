@@ -3,37 +3,53 @@ import './Header.scss';
 
 const Header = () => {
   return (
-    <header>
-      <div>
+    <header className="header">
+      <div className="header__illustration">
         <img src="" alt="" />
       </div>
 
-      <nav>
-        <button></button>
-        <ul>
+      <nav className="header__navigation">
+        <button className="header__menu">Menu</button>
+        <ul className="header__menu">
           <li>
-            <NavLink to="/mercury">Mercury</NavLink>
+            <NavLink className="header__link" to="/mercury">
+              Mercury
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/venus">Venus</NavLink>
+            <NavLink className="header__link" to="/venus">
+              Venus
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/earth">Earth</NavLink>
+            <NavLink className="header__link" to="/earth">
+              Earth
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/mars">Mars</NavLink>
+            <NavLink className="header__link" to="/mars">
+              Mars
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/jupiter">Jupiter</NavLink>
+            <NavLink className="header__link" to="/jupiter">
+              Jupiter
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/saturn">Saturn</NavLink>
+            <NavLink className="header__link" to="/saturn">
+              Saturn
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/uranus">Uranus</NavLink>
+            <NavLink className="header__link" to="/uranus">
+              Uranus
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/neptune">Neptune</NavLink>
+            <NavLink className="header__link" to="/neptune">
+              Neptune
+            </NavLink>
           </li>
         </ul>
       </nav>
