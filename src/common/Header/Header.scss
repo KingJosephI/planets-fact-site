@@ -1,0 +1,19 @@
+@use '../../styles/function' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  &__menu {
+    display: flex;
+    gap: rem(10);
+  }
+}
+
+@media (width >= rem(700)) {
+  .header {
+    &__hamburger {
+      display: none;
+    }
+  }
+}

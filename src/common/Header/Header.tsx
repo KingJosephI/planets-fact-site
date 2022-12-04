@@ -4,12 +4,10 @@ import './Header.scss';
 const Header = () => {
   return (
     <header className="header">
-      <div className="header__illustration">
-        <img src="" alt="" />
-      </div>
+      <h1 className="header__illustration">The Planets</h1>
 
       <nav className="header__navigation">
-        <button className="header__menu">Menu</button>
+        <button className="header__hamburger">Menu</button>
         <ul className="header__menu">
           <li>
             <NavLink className="header__link" to="/mercury">
