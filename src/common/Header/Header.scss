@@ -22,33 +22,28 @@
   &__hamburger {
     display: block;
   }
+
   &__link {
-    color: $grey;
-    font-size: rem(11);
-    line-height: rem(25);
-    letter-spacing: rem(2);
-    text-transform: uppercase;
-    font-weight: 700;
     display: inline-block;
     padding-block: rem(35);
     border-top: rem(4) solid transparent;
+    font-size: rem(11);
+    font-weight: 700;
+    line-height: rem(25);
+    letter-spacing: rem(2);
+    text-transform: uppercase;
+    color: $grey;
 
     &:hover {
       color: $white;
-    }
-
-    // &:first-of-type:hover {
-    //   border-top-color: $teal;
-    // }
-    &:nth-child(2) {
-      border-top-color: $yellow;
-      color: red;
+      border-color: $teal;
     }
   }
 }
 
 @media (width >= rem(700)) {
   .header {
+    flex-direction: column;
     padding-inline: rem(35);
     border-bottom: rem(1) solid hsla(0, 0%, 100%, 0.2);
 
@@ -59,5 +54,27 @@
     &__menu {
       display: flex;
     }
+
+    // &__link:hover {
+    //   color: blue;
+    // }
+
+    // &__link:first-child {
+    //   color: purple;
+    // }
+    // .active {
+    //   &:first-child {
+    //     color: red;
+    //   }
+    //   &:nth-child(2) {
+    //     color: blue !important;
+    //   }
+    // }
+  }
+}
+
+@media (width >= rem(1024)) {
+  .header {
+    flex-direction: row;
   }
 }
