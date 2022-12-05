@@ -1,3 +1,5 @@
+@use './styles/' as *;
+
 *,
 *::before,
 *::after {
@@ -8,6 +10,12 @@
 
 body {
   min-height: 100vh;
+  background-image: url('./assets/background-stars.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $dark-blue;
+  color: $white;
+  font-family: 'Antonio', sans-serif;
 }
 
 img {
@@ -21,5 +29,5 @@ ul {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }

@@ -1,9 +1,14 @@
+import * as React from 'react';
 import './Planet.scss';
 
-const Planet = () => {
+interface IPlanet {
+  name: string;
+}
+
+const Planet: React.FC<IPlanet> = (props) => {
   return (
     <section className="planet">
-      <h1>Mercure</h1>
+      <h1>{props.name}</h1>
     </section>
   );
 };

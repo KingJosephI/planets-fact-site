@@ -1,19 +1,63 @@
-@use '../../styles/function' as *;
+@use '../../styles' as *;
 
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    font-size: rem(28);
+    letter-spacing: rem(-1.05);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
 
   &__menu {
     display: flex;
-    gap: rem(10);
+    align-items: center;
+    gap: rem(33);
+    display: none;
+  }
+
+  &__hamburger {
+    display: block;
+  }
+  &__link {
+    color: $grey;
+    font-size: rem(11);
+    line-height: rem(25);
+    letter-spacing: rem(2);
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    padding-block: rem(35);
+    border-top: rem(4) solid transparent;
+
+    &:hover {
+      color: $white;
+    }
+
+    // &:first-of-type:hover {
+    //   border-top-color: $teal;
+    // }
+    &:nth-child(2) {
+      border-top-color: $yellow;
+      color: red;
+    }
   }
 }
 
 @media (width >= rem(700)) {
   .header {
+    padding-inline: rem(35);
+    border-bottom: rem(1) solid hsla(0, 0%, 100%, 0.2);
+
     &__hamburger {
       display: none;
+    }
+
+    &__menu {
+      display: flex;
     }
   }
 }

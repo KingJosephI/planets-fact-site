@@ -4,7 +4,7 @@ import './Header.scss';
 const Header = () => {
   return (
     <header className="header">
-      <h1 className="header__illustration">The Planets</h1>
+      <h1 className="header__logo">The Planets</h1>
 
       <nav className="header__navigation">
         <button className="header__hamburger">Menu</button>
