@@ -2,8 +2,15 @@ import { NavLink } from 'react-router-dom';
 import './Header.scss';
 
 const Header = () => {
+  // const windowSize = window.innerWidth;
   const activeStyle = {
-    mercure: { color: '#fff', borderColor: '#419ebb' },
+    mercure: {
+      desktop: {
+        color: '#fff',
+        borderColor: '#419ebb',
+      },
+      tablet: { borderBottom: '4px solid #419ebb' },
+    },
     venus: { color: '#fff', borderColor: '#eda249' },
     earth: { color: '#fff', borderColor: '#6f2ed6' },
     mars: { color: '#fff', borderColor: '#cd5120' },
@@ -24,7 +31,11 @@ const Header = () => {
           <li>
             <NavLink
               style={({ isActive }) =>
-                isActive ? activeStyle.mercure : undefined
+                isActive && window.innerWidth >= 1024
+                  ? activeStyle.mercure.desktop
+                  : isActive && window.innerWidth >= 700
+                  ? activeStyle.mercure.tablet
+                  : undefined
               }
               className="header__link"
               to="/mercury"

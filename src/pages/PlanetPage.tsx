@@ -1,16 +1,25 @@
-import Header from '../common/Header/Header';
-import Planet from '../common/Planet/Planet';
+import { Header, Planet } from '../common';
 import { useLocation } from 'react-router-dom';
+import { planets } from '../data/data';
+// import { createRequire } from 'module';
 import './PlanetPage.scss';
 
 const PlanetPage = () => {
+  // const require = createRequire(import.meta.url);
   const { pathname } = useLocation();
+
+  // const illustration = planets[0].images.planet;
 
   return (
     <>
       <Header />
       <main>
-        <Planet name={pathname} />
+        <Planet
+          name={pathname}
+          description={planets[0].overview.content}
+          source={planets[0].overview.source}
+          // illustration={require(planets[0].images.planet)}
+        />
       </main>
     </>
   );
