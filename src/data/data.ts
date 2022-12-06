@@ -49,9 +49,9 @@ export const planets = [
     radius: '6,051.8 KM',
     temperature: '471°c',
     images: {
-      planet: '.../assets/planet-venus.svg',
-      internal: '.../assets/planet-venus-internal.svg',
-      geology: '.../assets/geology-venus.png',
+      planet: '../assets/planet-venus.svg',
+      internal: '../assets/planet-venus-internal.svg',
+      geology: '../assets/geology-venus.png',
     },
   },
   {

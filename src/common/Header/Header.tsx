@@ -26,7 +26,7 @@ const Header = () => {
       </h1>
 
       <nav className="header__navigation">
-        <button className="header__hamburger">Menu</button>
+        <button className="header__hamburger"></button>
         <ul className="header__menu">
           <li>
             <NavLink

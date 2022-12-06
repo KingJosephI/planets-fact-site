@@ -4,7 +4,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: rem(24);
+  border-bottom: rem(1) solid hsla(0, 0%, 100%, 0.2);
 
+  &__hamburger {
+    width: rem(40);
+    aspect-ratio: 1;
+    background-color: transparent;
+    border: none;
+    background-image: url('../../assets/icon-hamburger.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
   &__logo {
     font-size: rem(28);
     letter-spacing: rem(-1.05);
@@ -44,8 +56,7 @@
 @media (width >= rem(700)) {
   .header {
     flex-direction: column;
-    padding-inline: rem(35);
-    border-bottom: rem(1) solid hsla(0, 0%, 100%, 0.2);
+    padding: 0 rem(35) 0;
 
     &__hamburger {
       display: none;
